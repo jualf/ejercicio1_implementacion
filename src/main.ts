@@ -5,6 +5,7 @@ import {Persona} from "./persona.js";
 import {Plan} from "./plan.js";
 import {Plataforma} from "./plataforma.js";
 import {Serie} from "./serie.js";
+import { Series } from "./serie.js";
 
 const acto1 = new Actor("Pepito", "www.asdasdasdad.com", "actor principal")
 
@@ -29,6 +30,18 @@ console.log(plan1)
 const plataforma1 = new Plataforma("Netflix", "www.netflix.com")
 console.log(plataforma1)
 
+const ListaSeries = new Series()
+
 const serie1 = new Serie ("www.sdkgndkv.com", "Los vengadores", "accion")
 
-console.log(serie1)
+const serie2 = new Serie ("www.sdkgndkv.com", "Los fantasticos", "accion")
+
+ListaSeries.agregarSerie(serie1)
+ListaSeries.agregarSerie(serie2)
+
+ListaSeries.mostrarSeries()
+
+ListaSeries.mostrarDetalleSerie("Los vengadores")
+ListaSeries.mostrarDetalleSerie("Los fantasticos")
+
+
